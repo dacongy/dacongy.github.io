@@ -3,32 +3,40 @@
 <body>
 <h1>LeakDroid: Systematic Testing for Resource Leaks in Android Applications</h1>
 
-The use of mobile devices and the complexity of their software continue to grow
-rapidly. This growth presents significant challenges for software correctness <br />
-and performance.  In addition to traditional defects, a key consideration are
-defects related to the limited resources available on these devices. Resource <br />
-leaks in an application, due to improper management of resources, can lead to
-slowdowns, crashes, and negative user experience. Despite a large body of <br />
-existing work on leak detection, testing for resource leaks remains a
-challenging problem. We propose a novel and comprehensive approach for <br />
-systematic testing for resource leaks in Android software. Similar to existing
-testing techniques, the approach is based on a GUI model, but is focused <br />
-specifically on coverage criteria aimed at resource leak defects. These
-criteria are based on neutral cycles: sequences of GUI events that should have <br />
-a “neutral” effect and should not lead to increases in resource usage. Several
-important categories of neutral cycles are considered in the proposed test <br />
-coverage criteria. Experimental evaluation and case studies were performed on
-eight Android applications. The approach exposed 18 resource leak defects, 12 <br />
-of which were previously unknown.  These results provide motivation for future
-work on analysis, testing, and prevention of resource leaks in Android software.
+The use of mobile devices and the complexity of their software continue to
+grow rapidly. This growth presents significant challenges for software
+correctness and performance. In addition to traditional defects, a key
+consideration are defects related to the limited resources available on
+these devices. Resource leaks in an application, due to improper management
+of resources, can lead to slowdowns, crashes, and negative user experience.
+Despite a large body of existing work on leak detection, testing for
+resource leaks remains a challenging problem. We propose a novel and
+comprehensive approach for systematic testing for resource leaks in Android
+software. Similar to existing testing techniques, the approach is based on a
+GUI model, but is focused specifically on coverage criteria aimed at
+resource leak defects. These criteria are based on neutral cycles: sequences
+of GUI events that should have a "neutral" effect and should not lead to
+increases in resource usage.
+
+We have defined several test coverage criteria based on different categories
+of neutral cycles in the GUI model. This approach is informed by knowledge
+of typical causes of resource leaks in Android software. We have also
+developed LeakDroid,
+a tool that generates test cases to trigger repeated execution of neutral
+cycles. When the test cases are executed, resource usage is monitored for
+suspicious behaviors. The approach has been evaluated on several Android
+applications. The evaluation demonstrates that the proposed test generation
+effectively uncovers a variety of resource leaks. This page contains the
+conference paper describing this work, the implementation of LeakDroid, as
+well as the applications, models, and test cases used in our experiments.
 
 <hr />
 
 <h2>People</h2>
 <ul>
-  <li><a href="http://www.cse.ohio-state.edu/~rountev/">Prof. Atanas Rountev</a></li>
   <li><a href="http://www.cse.ohio-state.edu/~yan/">Dacong Yan</a></li>
   <li><a href="http://www.cse.ohio-state.edu/~yangs/">Shengqian Yang</a></li>
+  <li><a href="http://www.cse.ohio-state.edu/~rountev/">Prof. Atanas Rountev</a></li>
 </ul>
 
 <hr />
@@ -45,9 +53,9 @@ work on analysis, testing, and prevention of resource leaks in Android software.
 
 <h2>Download (Version 0.1, Released on ???)</h2>
 
-<p>The software release contains both the LeakDroid source code, the benchmark
-programs used for experiments, and the experimental results. All of these materials <br />
-can be downloaded from <a href="???">LeakDroid v0.1</a>. Please see
+The software release contains the LeakDroid source code, the programs used
+in the experiments, and the corresponding GUI models and test cases. Release
+1.0 can be downloaded from <a href="">http://...</a>. Please see
 the included README file for usage instructions. For questions or comments,
 please contact
 <a href="http://www.cse.ohio-state.edu/~rountev/">Prof. Atanas Rountev</a>.
